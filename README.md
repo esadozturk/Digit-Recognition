@@ -1,2 +1,2 @@
 # Digit-Recognition
-A project to classify MNIST digits
+A project to classify MNIST digits, "hello, world" of machine learning.
