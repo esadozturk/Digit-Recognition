@@ -21,3 +21,5 @@ model.compile(optimizer="rmsprop",
               metrics=["accuracy"])
 
 model.fit(train_data, train_labels, epochs=8, batch_size=128, validation_split=0.2)
+
+results = model.evaluate(test_data, test_labels)
