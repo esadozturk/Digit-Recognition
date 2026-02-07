@@ -9,3 +9,9 @@ train_data = train_data.reshape(60000, 28*28)
 train_data = train_data.astype("float32") / 255
 train_labels = train_labels.reshape(60000, 28*28)
 train_labels = train_labels.astype("float32") / 255
+
+model = keras.Sequential([
+    layers.Dense(64, activation="relu"),
+    layers.Dense(64, activation="relu"),
+    layers.Dense(10, activation="softmax")
+])
