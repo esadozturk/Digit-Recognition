@@ -15,3 +15,7 @@ model = keras.Sequential([
     layers.Dense(64, activation="relu"),
     layers.Dense(10, activation="softmax")
 ])
+
+model.compile(optimizer="rmsprop",
+              loss="sparse_categorical_crossentropy",
+              metrics=["accuracy"])
