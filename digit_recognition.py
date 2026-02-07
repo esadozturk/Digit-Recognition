@@ -19,3 +19,5 @@ model = keras.Sequential([
 model.compile(optimizer="rmsprop",
               loss="sparse_categorical_crossentropy",
               metrics=["accuracy"])
+
+model.fit(train_data, train_labels, epochs=7, batch_size=128)
