@@ -20,6 +20,10 @@ model.compile(optimizer="rmsprop",
               loss="sparse_categorical_crossentropy",
               metrics=["accuracy"])
 
-model.fit(train_data, train_labels, epochs=8, batch_size=128, validation_split=0.2)
+# use validation to find the robust fit point
+# model.fit(train_data, train_labels, epochs=8, batch_size=128, validation_split=0.2)
+
+# now, train on the full data without splitting
+model.fit(train_data, train_labels, epochs=8, batch_size=128)
 
 results = model.evaluate(test_data, test_labels)
